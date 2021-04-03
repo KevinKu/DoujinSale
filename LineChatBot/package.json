@@ -1,0 +1,14 @@
+{
+  "name": "linechatbot_deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "proof.K",
+  "license": "ISC",
+  "dependencies": {
+    "zip-lib": "^0.7.2"
+  }
+}
