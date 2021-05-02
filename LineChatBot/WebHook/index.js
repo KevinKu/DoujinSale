@@ -103,7 +103,7 @@ const show_session_list = async (replyToken) => {
                     "action": {
                       "type": "uri",
                       "label": "action",
-                      "uri": "http://linecorp.com/"
+                      "uri": process.env["liffURI"]
                     }
                   }
                 ]
