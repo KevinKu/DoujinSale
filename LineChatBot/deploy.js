@@ -41,3 +41,16 @@ if(process.argv[2] === "webhook"){
     }); 
 
 }
+
+
+
+if(process.argv[2] === "liff"){
+
+
+    cmd.execSync("npm --prefix ./liff run build");
+
+    cmd.execSync(`aws s3 sync ./liff/dist/ s3://${config["s3_bucket_name"]}/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers`);
+
+    
+
+}
