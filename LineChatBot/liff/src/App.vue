@@ -1,5 +1,19 @@
 <template>
   <div>
+    <van-collapse 
+      v-model="issue"
+      class="list" 
+      accordion 
+    >
+      <van-collapse-item 
+        title="test"
+        size="large"
+        value="hihi"
+        label="甚麼東西"
+      >
+        困難
+      </van-collapse-item>
+    </van-collapse>
     <div class="footer">
       <van-swipe 
         class="booth-number"
@@ -31,6 +45,9 @@
 
 <script>
 import { Swipe, SwipeItem } from "vant";
+import { Collapse, CollapseItem } from "vant";
+import "vant/lib/collapse/style";
+import "vant/lib/collapse-item/style";
 
 
 
@@ -41,15 +58,18 @@ const booth_number_1 = ["A","B","C"];
 const booth_number_2 = ["1","2","3"];
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     [Swipe.name]: Swipe,
-    [SwipeItem.name]: SwipeItem
+    [SwipeItem.name]: SwipeItem,
+    [Collapse.name]: Collapse,
+    [CollapseItem.name]: CollapseItem
   },
   data(){
       return {
         booth_number_1 : booth_number_1,
-        booth_number_2 : booth_number_2
+        booth_number_2 : booth_number_2,
+        issue: []
       };
   }
 }
@@ -57,7 +77,11 @@ export default {
 
 <style>
 
-
+.list {
+  height: 100%;
+  width: 100%;
+  margin:30% 5% 5% auto;
+}
 
 .footer {
   height: 30%;
